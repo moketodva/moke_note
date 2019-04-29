@@ -10,6 +10,7 @@ grep <str> #筛选,配合管道使用
 grep -v <str> #过滤,配合管道使用
 wc -l #统计行数
 awk '{print $<num>}' #默认空格划分，打印出相应位置的信息，难以说明，实操吧...
+source <file> #可用来执行一堆命令的shell脚本,也可以让一些配置生效
 ```
 
 ### 文件基本操作
@@ -103,6 +104,13 @@ systemctl unmask iptables.service #恢复服务
 systemctl enable iptables.service #设置为开机自启动
 systemctl disable iptables.service #设置为不开机自启动
 ```
+### 文件传输
+>注：就介绍了scp，因为命令简单、ssh加密、不可断点续传、cpu占用少；sftp没介绍，它命令复杂、ssh加密、可断点续传 、cpu占用多；至于rz、sz也没介绍，有兴趣自己去了解下
+
+```bash
+scp -r <src> <usr>@<ip>:<dst> #将本地文件复制到远程服务器
+scp -r <src> <dst> #本地文件拷贝
+```
 
 ### 配置文件
 
@@ -116,4 +124,3 @@ systemctl disable iptables.service #设置为不开机自启动
 /etc/hosts.allow #ip白名单
 /etc/hosts.deny #ip黑名单
 ```
-
