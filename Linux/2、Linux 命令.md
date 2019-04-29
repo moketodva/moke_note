@@ -1,3 +1,5 @@
+>注：基于CentOS 7
+
 ### 通用
 
 ```bash
@@ -54,6 +56,7 @@ chattr <file> #改变文件的隐藏属性，我所认识的只有i，加上后�
 
 ```bash
 科普：linux文件后缀名跟文件真实类型没有必然关系，想看具体的文件类型可以通过file
+注：默认不支持zip格式，可以通过yum install zip和yum install unzip来支持
 
 tar -cvf <dst> <src> #打包成.tar格式
 tar -xvf <file> #上面的反向操作
